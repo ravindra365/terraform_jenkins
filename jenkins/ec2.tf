@@ -39,7 +39,7 @@ resource "aws_instance" "jenkins" {
     type        = "ssh"
     host        = self.public_ip
     user        = "ec2-user"
-    private_key = file("C:\\Users\\Admin\\Downloads\\terraform\\keys\\aws_dev.pem")
+    private_key = file("/keys/aws_dev.pem")
   }
   tags = {
     "Name" = "Jenkins"
