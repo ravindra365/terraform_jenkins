@@ -30,7 +30,7 @@ pipeline{
 		stage('Terraform apply'){
 			steps{
 			echo "Terraform reformat configuration"
-			sh "cd ${env.WORKSPACE}/jenkins; terraform apply"  
+			sh "cd ${env.WORKSPACE}/jenkins; terraform apply -auto-approve"  
 			}
 		}
     }
