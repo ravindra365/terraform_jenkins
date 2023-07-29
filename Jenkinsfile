@@ -5,8 +5,8 @@ pipeline{
         stage('TerraformInit'){
             steps{
 			echo "Running ${env.BUILD_ID} on ${env.WORKSPACE}"
-			sh 'cd ${env.WORKSPACE}/jenkins; pwd'
-			sh 'terraform init'
+			sh "cd ${env.WORKSPACE}/jenkins; pwd"
+			sh "terraform init cd ${env.WORKSPACE}/jenkins"
 
                 
             }
