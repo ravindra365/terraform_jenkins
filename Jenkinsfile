@@ -4,7 +4,8 @@ pipeline{
     stages{
         stage('TerraformInit'){
             steps{
-			sh 'cd ${WORKSPACE}jenkins/'
+			sh 'pwd'
+			sh 'cd ${WORKSPACE}/jenkins'
 			sh 'terraform init'
 
                 
