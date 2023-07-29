@@ -4,12 +4,16 @@ pipeline{
     stages{
         stage('TerraformInit'){
             steps{
-			echo "Running ${env.BUILD_ID} on ${env.WORKSPACE}"
-			sh "cd ${env.WORKSPACE}/jenkins; terraform init"
-
-                
+			echo "Terraform init"
+			sh "cd ${env.WORKSPACE}/jenkins; terraform init"  
             }
         }
+		stage('Terraform Plan'){
+			steps{
+			echo "Terraform init"
+			sh "cd ${env.WORKSPACE}/jenkins; terraform plan"  
+			}
+		}
     }
     
 }
